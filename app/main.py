@@ -14,11 +14,11 @@ def flip_coin() -> dict:
     return {k: (v / n_trials) * 100 for k, v in results.items()}
 
 
-def draw_gaussian_distribution_graph(data: dict) -> None:
-    x = list(data.keys())
-    y = list(data.values())
+def draw_gaussian_distribution_graph(data: dict):
+    heads_counts = list(data.keys())
+    percentages = list(data.values())
 
-    plt.plot(x, y, color="blue")
+    plt.plot(heads_counts, percentages, color="blue")
     plt.title("Gaussian distribution")
     plt.xlabel("Heads count")
     plt.ylabel("Drop percentage %")
