@@ -14,7 +14,7 @@ def flip_coin() -> dict:
     return {k: (v / n_trials) * 100 for k, v in results.items()}
 
 
-def draw_gaussian_distribution_graph(data: dict):
+def draw_gaussian_distribution_graph(data: dict) -> None:
     heads_counts = list(data.keys())
     percentages = list(data.values())
 
